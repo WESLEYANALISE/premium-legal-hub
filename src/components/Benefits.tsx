@@ -1,48 +1,58 @@
 
 import React from 'react';
+import { BookOpen, Search, Bot, FileDigit, Brain, FileCheck, Video, Book, Scale, Award } from 'lucide-react';
 import BenefitCard from './BenefitCard';
-import { BookOpen, FileText, Search, Code, Bot, FileDigit, Brain, FileCheck, Video, Book } from 'lucide-react';
 
 const Benefits = () => {
   const benefits = [
     {
       title: "Mais de 20.000 Flashcards",
+      description: "Memorize conceitos jurídicos de forma eficiente e rápida com nosso sistema exclusivo de flashcards.",
       icon: <BookOpen className="h-12 w-12" />,
     },
     {
       title: "Mais de 6.000 questões comentadas",
+      description: "Pratique com questões atualizadas e comentadas por especialistas para maximizar seu aprendizado.",
       icon: <FileText className="h-12 w-12" />,
     },
     {
       title: "Mais de 600 livros jurídicos",
+      description: "Acesse uma biblioteca completa com os principais livros do Direito, sempre à sua disposição.",
       icon: <Book className="h-12 w-12" />,
     },
     {
-      title: "Todos os Códigos atualizados",
-      icon: <Code className="h-12 w-12" />,
+      title: "Vade Mecum 2025",
+      description: "Acesse todas as leis atualizadas e organizadas, com busca rápida e navegação intuitiva.",
+      icon: <Scale className="h-12 w-12" />,
     },
     {
       title: "Assistente Jurídico Inteligente",
+      description: "IA avançada que lê PDFs, cria resumos e transcreve áudios para otimizar seus estudos.",
       icon: <Bot className="h-12 w-12" />,
     },
     {
       title: "Mais de 200 resumos prontos",
+      description: "Economize tempo com resumos completos e atualizados das principais matérias.",
       icon: <FileDigit className="h-12 w-12" />,
     },
     {
       title: "Mapas Mentais e Gerador",
+      description: "Organize seu conhecimento visualmente com nossa ferramenta exclusiva de mapas mentais.",
       icon: <Brain className="h-12 w-12" />,
     },
     {
       title: "Mais de 10.000 Contratos e Petições",
+      description: "Modelos profissionais prontos para uso, economizando seu tempo na prática jurídica.",
       icon: <FileCheck className="h-12 w-12" />,
     },
     {
       title: "Cursos jurídicos de qualidade",
-      icon: <Search className="h-12 w-12" />,
+      description: "Atualize seus conhecimentos com cursos ministrados por especialistas renomados.",
+      icon: <Award className="h-12 w-12" />,
     },
     {
       title: "Mais de 400 vídeo-aulas exclusivas",
+      description: "Aprenda com aulas dinâmicas e objetivas sobre os temas mais importantes do Direito.",
       icon: <Video className="h-12 w-12" />,
     },
   ];
@@ -64,6 +74,7 @@ const Benefits = () => {
             <BenefitCard 
               key={index}
               title={benefit.title}
+              description={benefit.description}
               icon={benefit.icon}
               delay={100 + index * 100}
             />
