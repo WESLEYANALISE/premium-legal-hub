@@ -1,6 +1,5 @@
 
 import React, { useEffect, useState } from 'react';
-import Logo from './Logo';
 import { ChevronRight } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { useDeviceDetect } from '@/hooks/use-device-detect';
@@ -33,46 +32,35 @@ const Header = () => {
       <div className="absolute inset-0 parallax-bg opacity-30 z-0"></div>
       
       <div className="container mx-auto z-10 relative">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
-            <Logo />
-          </div>
+        <div className="flex flex-col items-center justify-center space-y-8">
+          {/* Removed Logo component */}
           
-          <nav className={`mt-4 md:mt-0 transition-all duration-700 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
-            <button 
-              className="text-white bg-law-red hover:bg-law-darkred px-4 py-2 rounded-lg transition-all"
-              onClick={handleCTAClick}
+          <div className="mt-16 md:mt-24 text-center max-w-4xl mx-auto">
+            <h1 
+              className={`text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
             >
-              {isMobile ? "Adquirir Agora" : "Faça Download pelo Celular"}
-            </button>
-          </nav>
-        </div>
-        
-        <div className="mt-16 md:mt-24 text-center max-w-4xl mx-auto">
-          <h1 
-            className={`text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-          >
-            <span className="text-law-red">O melhor</span> aplicativo jurídico, com tudo o que você precisa
-          </h1>
-          
-          <p 
-            className={`mt-6 text-lg md:text-xl text-gray-300 transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-          >
-            Estudar e trabalhar no Direito nunca foi tão fácil e completo, tudo em um único lugar.
-          </p>
-          
-          <div 
-            className={`mt-8 md:mt-12 transition-all duration-700 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-          >
-            <button 
-              onClick={handleCTAClick} 
-              className="cta-button group bg-law-red text-white font-medium text-lg md:text-xl px-8 py-4 rounded-xl hover:bg-law-accent transition-all duration-300 animate-pulse-slow shadow-lg shadow-law-red/20"
+              <span className="text-law-red">O melhor</span> aplicativo jurídico, com tudo o que você precisa
+            </h1>
+            
+            <p 
+              className={`mt-6 text-lg md:text-xl text-gray-300 transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
             >
-              <div className="flex items-center gap-2">
-                <span>Adquira Agora por R$49,99 – Acesso Vitalício</span>
-                <ChevronRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-              </div>
-            </button>
+              Estudar e trabalhar no Direito nunca foi tão fácil e completo, tudo em um único lugar.
+            </p>
+            
+            <div 
+              className={`mt-8 md:mt-12 transition-all duration-700 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+            >
+              <button 
+                onClick={handleCTAClick} 
+                className="w-full max-w-md mx-auto cta-button group bg-law-red text-white font-medium text-lg md:text-xl px-8 py-4 rounded-xl hover:bg-law-accent transition-all duration-300 animate-pulse-slow shadow-lg shadow-law-red/20"
+              >
+                <div className="flex items-center justify-center gap-2">
+                  <span>Adquira Agora por R$49,99 – Acesso Vitalício</span>
+                  <ChevronRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                </div>
+              </button>
+            </div>
           </div>
         </div>
       </div>
