@@ -1,6 +1,17 @@
-
 import React from 'react';
-import { BookOpen, Search, Bot, FileDigit, Brain, FileCheck, Video, Book, Scale, Award } from 'lucide-react';
+import { 
+  BookOpen, 
+  Search, 
+  Bot, 
+  FileDigit, 
+  Brain, 
+  FileCheck, 
+  Video, 
+  Book, 
+  Scale, 
+  Award,
+  FileText 
+} from 'lucide-react';
 import BenefitCard from './BenefitCard';
 
 const Benefits = () => {
