@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { ChevronRight } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
@@ -39,35 +38,25 @@ const Header = () => {
             className="w-20 h-20 object-contain mb-4 animate-fade-in"
           />
           
-          <div className="mt-8 md:mt-16 text-center max-w-4xl mx-auto">
-            <h1 
-              className={`text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+          <div 
+            className={`mt-8 md:mt-12 flex flex-col items-center space-y-4 transition-all duration-700 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+          >
+            <button 
+              onClick={handleCTAClick} 
+              className="group relative overflow-hidden w-full max-w-md mx-auto bg-gradient-to-r from-law-red via-law-accent to-law-red bg-[length:200%_100%] text-white font-medium px-8 py-5 rounded-xl transition-all duration-300 hover:bg-[position:100%_0] hover:scale-105 shadow-xl shadow-law-red/30 animate-pulse-slow"
             >
-              <span className="text-law-red">O melhor</span> aplicativo jurídico, com tudo o que você precisa
-            </h1>
+              <div className="flex items-center justify-center gap-3">
+                <span className="text-2xl md:text-3xl font-serif font-bold">Adquira Agora</span>
+                <span className="text-xl md:text-2xl font-serif opacity-90">R$49,99</span>
+              </div>
+              <ChevronRight className="w-5 h-5 transition-transform group-hover:translate-x-1 mx-auto mt-2" />
+              <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -translate-x-full animate-shimmer"></div>
+            </button>
             
-            <p 
-              className={`mt-6 text-lg md:text-xl text-gray-300 transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-            >
-              Estudar e trabalhar no Direito nunca foi tão fácil e completo, tudo em um único lugar.
-            </p>
-            
-            <div 
-              className={`mt-8 md:mt-12 transition-all duration-700 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-            >
-              <button 
-                onClick={handleCTAClick} 
-                className="group relative overflow-hidden w-full max-w-md mx-auto bg-gradient-to-r from-law-red via-law-accent to-law-red bg-[length:200%_100%] text-white font-medium px-8 py-5 rounded-xl transition-all duration-300 hover:bg-[position:100%_0] hover:scale-105 shadow-xl shadow-law-red/30 animate-pulse-slow"
-              >
-                <div className="flex flex-col items-center justify-center gap-2">
-                  <span className="text-xl md:text-2xl font-serif font-semibold">Adquira Agora por R$49,99</span>
-                  <span className="text-xs md:text-sm opacity-90 tracking-wider uppercase">
-                    Pagamento Único • Acesso Vitalício • Zero Mensalidades
-                  </span>
-                  <ChevronRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -translate-x-full animate-shimmer"></div>
-              </button>
+            <div className="text-center">
+              <p className="text-sm md:text-base text-white/90 font-medium tracking-wider uppercase bg-gradient-to-r from-law-red to-law-accent bg-clip-text text-transparent animate-pulse-slow">
+                Pagamento Único • Acesso Vitalício • Zero Mensalidades
+              </p>
             </div>
           </div>
         </div>
