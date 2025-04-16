@@ -36,7 +36,7 @@ const Header = () => {
           <img 
             src="https://imgur.com/vlSmtUg.png" 
             alt="Direito Premium App" 
-            className="w-full max-w-[280px] md:max-w-[320px] lg:max-w-[400px] h-auto mb-8 animate-fade-in"
+            className="w-20 h-20 object-contain mb-4 animate-fade-in"
           />
           
           <div className="mt-8 md:mt-16 text-center max-w-4xl mx-auto">
@@ -57,12 +57,14 @@ const Header = () => {
             >
               <button 
                 onClick={handleCTAClick} 
-                className="group relative overflow-hidden w-full max-w-md mx-auto bg-gradient-to-r from-law-red via-law-accent to-law-red bg-[length:200%_100%] text-white font-bold text-xl px-8 py-6 rounded-xl transition-all duration-300 hover:bg-[position:100%_0] hover:scale-105 shadow-lg shadow-law-red/20 animate-pulse-slow"
+                className="group relative overflow-hidden w-full max-w-md mx-auto bg-gradient-to-r from-law-red via-law-accent to-law-red bg-[length:200%_100%] text-white font-medium px-8 py-5 rounded-xl transition-all duration-300 hover:bg-[position:100%_0] hover:scale-105 shadow-xl shadow-law-red/30 animate-pulse-slow"
               >
                 <div className="flex flex-col items-center justify-center gap-2">
-                  <span className="text-2xl md:text-3xl font-serif">Adquira Agora por R$49,99</span>
-                  <span className="text-sm md:text-base opacity-90">Pagamento Único • Acesso Vitalício • Zero Mensalidades</span>
-                  <ChevronRight className="w-6 h-6 transition-transform group-hover:translate-x-1" />
+                  <span className="text-xl md:text-2xl font-serif font-semibold">Adquira Agora por R$49,99</span>
+                  <span className="text-xs md:text-sm opacity-90 tracking-wider uppercase">
+                    Pagamento Único • Acesso Vitalício • Zero Mensalidades
+                  </span>
+                  <ChevronRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -translate-x-full animate-shimmer"></div>
               </button>
